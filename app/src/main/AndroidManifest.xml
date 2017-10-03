@@ -23,7 +23,7 @@
         <activity
             android:name=".Contact_email"
             android:label="@string/title_activity_contact_email"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

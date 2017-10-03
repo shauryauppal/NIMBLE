@@ -41,7 +41,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_above="@+id/textView4"
         android:layout_alignParentStart="true"
@@ -53,7 +53,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -65,7 +65,7 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_above="@+id/textView3"
         android:layout_centerHorizontal="true"
