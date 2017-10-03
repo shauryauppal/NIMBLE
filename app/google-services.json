@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "837851012847",
+    "firebase_url": "https://nimble-1506358667425.firebaseio.com",
+    "project_id": "nimble-1506358667425",
+    "storage_bucket": "nimble-1506358667425.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837851012847:android:8592a8566e8d3a34",
+        "android_client_info": {
+          "package_name": "com.example.shaur.nimblenavigationdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837851012847-k5643bq3ij1s8cjl2fncsu4f3f5332r3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shaur.nimblenavigationdrawer",
+            "certificate_hash": "8c03bbda84463f58b7b9c852a4f3b1edc14d2dfd"
+          }
+        },
+        {
+          "client_id": "837851012847-jj4sbfb5l2i2csij7bqpl8t0sl2mv8lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0uOipZ8LrmFnpBWjzM_POnHKGZefsqdY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837851012847-jj4sbfb5l2i2csij7bqpl8t0sl2mv8lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
