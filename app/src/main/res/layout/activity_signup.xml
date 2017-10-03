@@ -7,6 +7,36 @@
     android:background="#46cfe1"
     tools:context=".signup">
 
+    <TextView
+        android:id="@+id/register_text"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/email_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:textColor="#003399"
+        android:text="LET US REGISTER"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+    <EditText
+        android:id="@+id/email_register"
+        android:hint="EMAIL"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password_register"
+        android:layout_alignEnd="@+id/password_register"
+        android:layout_alignStart="@+id/password_register"
+        android:layout_marginBottom="63dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
     <EditText
         android:id="@+id/password_register"
         android:layout_width="350dp"
@@ -26,41 +56,15 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="160dp" />
 
-    <EditText
-        android:id="@+id/email_register"
-        android:hint="EMAIL"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/password_register"
-        android:layout_alignEnd="@+id/password_register"
-        android:layout_alignStart="@+id/password_register"
-        android:layout_marginBottom="63dp"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <TextView
-        android:id="@+id/register_text"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_above="@+id/email_register"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center"
-        android:textColor="#003399"
-        android:text="LET US REGISTER"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <Button
         android:id="@+id/register_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="#CCFFCC"
         android:onClick="onRegister"
-        android:text="REGISTER" />
+        android:layout_margin="16dp"
+        android:text="REGISTER and LOGIN" />
 </RelativeLayout>

@@ -45,7 +45,7 @@ public class signup extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Log.i("TAG","createuser:successful");
-                                Toast.makeText(signup.this, "SUCCESS", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(signup.this, "Registered successfully", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(signup.this,signin.class);
                                 startActivity(intent);
