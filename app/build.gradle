@@ -18,6 +18,12 @@ android {
         }
     }
 }
+repositories {
+    mavenCentral()
+
+    maven { url "https://jitpack.io" }
+}
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -31,6 +37,7 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:10.0.1'
     compile 'com.google.android.gms:play-services-auth:10.0.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
 }
 
 

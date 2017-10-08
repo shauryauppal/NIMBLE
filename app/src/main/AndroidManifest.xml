@@ -19,14 +19,17 @@
             android:label="@string/title_activity_contact_email"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".signup" />
-        <activity android:name=".signin">
+        <activity android:name=".signin"></activity>
+        <activity android:name=".signout"></activity>
+
+        <activity android:name=".splashscreen_nimble">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".signout"></activity>
+
     </application>
 
 </manifest>

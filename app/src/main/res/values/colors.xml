@@ -6,4 +6,5 @@
     <color name="email">#0000FF</color>
     <color name="chat">#FF0000</color>
     <color name="white">#FFFF</color>
+    <color name="black">#000000</color>
 </resources>
