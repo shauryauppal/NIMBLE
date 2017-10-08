@@ -1,7 +1,10 @@
 package com.example.shaur.nimblenavigationdrawer;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,12 +38,42 @@ public class signin extends AppCompatActivity {
     final private int RC_SIGN_IN=2;
     GoogleApiClient mGoogleApiClient;
     FirebaseAuth.AuthStateListener mAuthListener;
-
+    boolean doubleBackToExitPressedOnce=false;
 
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
+
+
+    @Override
+    public void onBackPressed() {
+            if (doubleBackToExitPressedOnce) {
+                if (getFragmentManager().getBackStackEntryCount() ==0) {
+                    finishAffinity();
+                    System.exit(0);
+                } else {
+                    getFragmentManager().popBackStackImmediate();
+                }
+                return;
+            }
+
+            if (getFragmentManager().getBackStackEntryCount() ==0) {
+                this.doubleBackToExitPressedOnce = true;
+                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        doubleBackToExitPressedOnce = false;
+                    }
+                }, 2000);
+            } else {
+                getFragmentManager().popBackStackImmediate();
+            }
+        }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +154,9 @@ public class signin extends AppCompatActivity {
             }
         }
     }
+
+
+
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
         Log.d("TAG", "firebaseAuthWithGoogle:" + account.getId());

@@ -25,7 +25,7 @@ public class splashscreen_nimble extends AwesomeSplash {
         //Customize Circular Reveal
         configSplash.setBackgroundColor(R.color.black); //any color you want from colors.xml
         configSplash.setAnimCircularRevealDuration(2000); //int ms
-        //configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);  //or Flags.REVEAL_LEFT
+        configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);  //or Flags.REVEAL_LEFT
         //configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 
 
