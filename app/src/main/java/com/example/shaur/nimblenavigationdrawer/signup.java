@@ -15,13 +15,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.roger.catloadinglibrary.CatLoadingView;
 
 public class signup extends AppCompatActivity {
 
     EditText email;
     EditText password;
     private FirebaseAuth mAuth;
-
+    CatLoadingView mView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class signup extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email_register);
         password = (EditText) findViewById(R.id.password_register);
 
+        mView = new CatLoadingView();
         
         mAuth = FirebaseAuth.getInstance();
     }
@@ -39,11 +41,13 @@ public class signup extends AppCompatActivity {
         final String myEmail = email.getText().toString();
         final String myPass = password.getText().toString();
         if (checkvalidation(myEmail, myPass)) {
+            mView.show(getSupportFragmentManager(),"");
             mAuth.createUserWithEmailAndPassword(myEmail, myPass)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                mView.dismiss();
                                 Log.i("TAG","createuser:successful");
                                 //Toast.makeText(signup.this, "Registered successfully", Toast.LENGTH_SHORT).show();
 
@@ -51,6 +55,7 @@ public class signup extends AppCompatActivity {
                                 startActivity(intent);
                             }
                             else{
+                                mView.dismiss();
                                 Log.i("TAG","Authentication failed");
                                 Toast.makeText(signup.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
                             }

@@ -27,6 +27,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.roger.catloadinglibrary.CatLoadingView;
 
 public class signin extends AppCompatActivity {
 
@@ -35,10 +36,11 @@ public class signin extends AppCompatActivity {
     SignInButton button;
     Button signup_button;
     private FirebaseAuth mAuth;
-    final private int RC_SIGN_IN=2;
+    final private int RC_SIGN_IN = 2;
     GoogleApiClient mGoogleApiClient;
     FirebaseAuth.AuthStateListener mAuthListener;
-    boolean doubleBackToExitPressedOnce=false;
+    boolean doubleBackToExitPressedOnce = false;
+    CatLoadingView mView;
 
     protected void onStart() {
         super.onStart();
@@ -48,31 +50,31 @@ public class signin extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-            if (doubleBackToExitPressedOnce) {
-                if (getFragmentManager().getBackStackEntryCount() ==0) {
-                    finishAffinity();
-                    System.exit(0);
-                } else {
-                    getFragmentManager().popBackStackImmediate();
-                }
-                return;
-            }
-
-            if (getFragmentManager().getBackStackEntryCount() ==0) {
-                this.doubleBackToExitPressedOnce = true;
-                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-                new Handler().postDelayed(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        doubleBackToExitPressedOnce = false;
-                    }
-                }, 2000);
+        if (doubleBackToExitPressedOnce) {
+            if (getFragmentManager().getBackStackEntryCount() == 0) {
+                finishAffinity();
+                System.exit(0);
             } else {
                 getFragmentManager().popBackStackImmediate();
             }
+            return;
         }
+
+        if (getFragmentManager().getBackStackEntryCount() == 0) {
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = false;
+                }
+            }, 2000);
+        } else {
+            getFragmentManager().popBackStackImmediate();
+        }
+    }
 
 
     @Override
@@ -91,15 +93,13 @@ public class signin extends AppCompatActivity {
                 signIn();
             }
         });
-
-
+        mView = new CatLoadingView();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser()!=null)
-                {
-                    Intent intent = new Intent(signin.this,MainActivity.class);
+                if (firebaseAuth.getCurrentUser() != null) {
+                    Intent intent = new Intent(signin.this, MainActivity.class);
                     startActivity(intent);
                     Toast.makeText(signin.this, "Welcome Back", Toast.LENGTH_SHORT).show();
                 }
@@ -109,7 +109,7 @@ public class signin extends AppCompatActivity {
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(signin.this,signup.class));
+                startActivity(new Intent(signin.this, signup.class));
             }
         });
 
@@ -137,6 +137,7 @@ public class signin extends AppCompatActivity {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -156,23 +157,24 @@ public class signin extends AppCompatActivity {
     }
 
 
-
-
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
         Log.d("TAG", "firebaseAuthWithGoogle:" + account.getId());
 
+        mView.show(getSupportFragmentManager(), "");
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            mView.dismiss();
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             //updateUI(null);
 
                         } else {
+                            mView.dismiss();
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
                             Toast.makeText(signin.this, "Authentication failed.",
@@ -190,17 +192,21 @@ public class signin extends AppCompatActivity {
         final String myEmail = email.getText().toString();
         final String myPass = pass.getText().toString();
         if (checkvalidation(myEmail, myPass)) {
+
+            mView.show(getSupportFragmentManager(), "");
             mAuth.signInWithEmailAndPassword(myEmail, myPass)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                mView.dismiss();
                                 Log.i("TAG", "Login OK");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(signin.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(signin.this, MainActivity.class);
                                 startActivity(intent);
                             } else {
+                                mView.dismiss();
                                 Toast.makeText(signin.this, "Failed Login", Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -208,13 +214,11 @@ public class signin extends AppCompatActivity {
         }
     }
 
-    private boolean checkvalidation(String myEmail,String myPass){
+    private boolean checkvalidation(String myEmail, String myPass) {
 
-        if(!myEmail.isEmpty() && myEmail!=null && !myPass.isEmpty() && myPass!=null){
+        if (!myEmail.isEmpty() && myEmail != null && !myPass.isEmpty() && myPass != null) {
             return true;
-        }
-        else
-        {
+        } else {
             Toast.makeText(signin.this, "Incorrect ID or Password", Toast.LENGTH_SHORT).show();
             return false;
         }
