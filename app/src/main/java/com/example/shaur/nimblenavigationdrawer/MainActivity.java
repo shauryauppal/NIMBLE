@@ -14,13 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     boolean doubleBackToExitPressedOnce = false;
-
+    Button year1,year2,year3,year4,fileserver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +47,25 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        year1 = (Button) findViewById(R.id.year1);
+        year2 = (Button) findViewById(R.id.year2);
+        year3 = (Button) findViewById(R.id.year3);
+        year4 = (Button) findViewById(R.id.year4);
+        fileserver = (Button) findViewById(R.id.fileserver);
+
+        /*
+        TODO: ADD intent for buttons and add a viewpager
+         */
+
     }
 
     //boolean doubleBackToExitPressedOnce = false;
 
+    /**
+     * This part of code is for double back press to exit app
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
