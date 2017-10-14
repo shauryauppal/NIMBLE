@@ -1,8 +1,10 @@
 package com.example.shaur.nimblenavigationdrawer;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.v4.app.LoaderManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -130,6 +132,10 @@ public class signin extends AppCompatActivity {
                 })
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+
+
+
+
     }
 
 

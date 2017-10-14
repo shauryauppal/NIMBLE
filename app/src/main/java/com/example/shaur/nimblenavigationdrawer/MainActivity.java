@@ -1,6 +1,9 @@
 package com.example.shaur.nimblenavigationdrawer;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -22,6 +25,27 @@ public class MainActivity extends AppCompatActivity
 
     boolean doubleBackToExitPressedOnce = false;
     Button year1,year2,year3,year4,fileserver;
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+                /*
+        This part of code prompts the user to connect to internet connection
+         */
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        //get details on currently active default data network
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        if(networkInfo !=null && networkInfo.isConnected()){
+            //Do-nothing
+        }
+        else{
+            startActivity(new Intent(MainActivity.this,no_internet.class));
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +71,25 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /*
+        This part of code prompts the user to connect to internet connection
+         */
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        //get details on currently active default data network
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+
+        if(networkInfo !=null && networkInfo.isConnected()){
+            //Do-nothing
+        }
+        else{
+            startActivity(new Intent(MainActivity.this,no_internet.class));
+            Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show();
+        }
+
+
+
 
 
         year1 = (Button) findViewById(R.id.year1);

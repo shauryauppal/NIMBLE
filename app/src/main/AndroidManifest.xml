@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shaur.nimblenavigationdrawer">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/nimble_leaf"
@@ -19,9 +23,8 @@
             android:label="@string/title_activity_contact_email"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".signup" />
-        <activity android:name=".signin"></activity>
-        <activity android:name=".signout"></activity>
-
+        <activity android:name=".signin" />
+        <activity android:name=".signout" />
         <activity android:name=".splashscreen_nimble">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".no_internet"></activity>
     </application>
 
 </manifest>
