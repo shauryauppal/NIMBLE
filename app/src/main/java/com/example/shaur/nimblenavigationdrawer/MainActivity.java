@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         //get details on currently active default data network
+        assert connMgr != null;
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
         if(networkInfo !=null && networkInfo.isConnected()){
@@ -99,12 +100,45 @@ public class MainActivity extends AppCompatActivity
         fileserver = (Button) findViewById(R.id.fileserver);
 
         /*
-        TODO: ADD intent for buttons and add a viewpager
+        TODO: ADD fileserver google drive api
          */
+        year1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
+                intent.putExtra(Intent.EXTRA_TEXT,0);
+                startActivity(intent);
+            }
+        });
+        year2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
+                intent.putExtra(Intent.EXTRA_TEXT,1);
+                startActivity(intent);
+            }
+        });
+
+        year3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
+                intent.putExtra(Intent.EXTRA_TEXT,2);
+                startActivity(intent);
+            }
+        });
+
+        year4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
+                intent.putExtra(Intent.EXTRA_TEXT,3);
+                startActivity(intent);
+            }
+        });
 
     }
 
-    //boolean doubleBackToExitPressedOnce = false;
 
     /**
      * This part of code is for double back press to exit app
