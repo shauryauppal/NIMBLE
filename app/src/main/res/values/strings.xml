@@ -14,4 +14,7 @@
     <string name="year2">IInd Year</string>
     <string name="year3">IIIrd Year</string>
     <string name="year4">IVth Year</string>
+    <string name="bookall">BOOKS</string>
+    <string name="simple">SIMPLE POSTING</string>
+    <string name="smart">SMART POSTING</string>
 </resources>
