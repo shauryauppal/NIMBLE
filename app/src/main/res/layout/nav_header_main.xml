@@ -20,7 +20,7 @@
         android:layout_weight="0.23"
         android:adjustViewBounds="true"
         android:cropToPadding="true"
-        app:srcCompat="@drawable/nimblelogo" />
+        app:srcCompat="@drawable/nimble_leaf" />
 
     <TextView
         android:layout_width="match_parent"

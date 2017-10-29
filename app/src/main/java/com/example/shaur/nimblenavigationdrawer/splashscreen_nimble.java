@@ -24,13 +24,13 @@ public class splashscreen_nimble extends AwesomeSplash {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //Customize Circular Reveal
         configSplash.setBackgroundColor(R.color.black); //any color you want from colors.xml
-        configSplash.setAnimCircularRevealDuration(2000); //int ms
+        configSplash.setAnimCircularRevealDuration(1800); //int ms
         configSplash.setRevealFlagX(Flags.REVEAL_RIGHT);  //or Flags.REVEAL_LEFT
         //configSplash.setRevealFlagY(Flags.REVEAL_BOTTOM);
 
 
         configSplash.setBackgroundColor(R.color.black); //any color you want from colors.xml
-        configSplash.setAnimCircularRevealDuration(1000); //int ms
+        configSplash.setAnimCircularRevealDuration(950); //int ms
         configSplash.setRevealFlagX(Flags.REVEAL_LEFT);  //or Flags.REVEAL_LEFT
         configSplash.setRevealFlagY(Flags.REVEAL_TOP);//or Flags.REVEAL_TOP
 
@@ -38,7 +38,7 @@ public class splashscreen_nimble extends AwesomeSplash {
 
         //Customize Logo
         configSplash.setLogoSplash(R.drawable.nimble_leaf); //or any other drawable
-        configSplash.setAnimLogoSplashDuration(1000); //int ms
+        configSplash.setAnimLogoSplashDuration(950); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.FadeInDown); //choose one form Techniques (ref: https://github.com/daimajia/AndroidViewAnimations)
 
 

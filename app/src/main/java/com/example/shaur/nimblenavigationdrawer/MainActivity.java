@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
-                intent.putExtra(Intent.EXTRA_TEXT,0);
+                intent.putExtra(Intent.EXTRA_TEXT,"0");
                 startActivity(intent);
             }
         });
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
-                intent.putExtra(Intent.EXTRA_TEXT,1);
+                intent.putExtra(Intent.EXTRA_TEXT,"1");
                 startActivity(intent);
             }
         });
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
-                intent.putExtra(Intent.EXTRA_TEXT,2);
+                intent.putExtra(Intent.EXTRA_TEXT,"2");
                 startActivity(intent);
             }
         });
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,year_main_fragment.class);
-                intent.putExtra(Intent.EXTRA_TEXT,3);
+                intent.putExtra(Intent.EXTRA_TEXT,"3");
                 startActivity(intent);
             }
         });

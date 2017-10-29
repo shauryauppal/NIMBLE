@@ -26,16 +26,17 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".signup" />
         <activity android:name=".signin" />
-        <activity android:name=".signout" />
+        <activity android:name=".signout"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".splashscreen_nimble">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".no_internet" />
-        <activity android:name=".year_main_fragment"></activity>
+        <activity android:name=".year_main_fragment"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
