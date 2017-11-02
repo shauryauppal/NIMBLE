@@ -17,4 +17,5 @@
     <string name="bookall">BOOKS</string>
     <string name="simple">SIMPLE POSTING</string>
     <string name="smart">SMART POSTING</string>
+    <string name="simple_book_description">Description (min 30 words like telliing about edition year, book condition, etc)</string>
 </resources>
