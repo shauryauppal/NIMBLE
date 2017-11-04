@@ -93,6 +93,8 @@ public class simple_posting_books extends Fragment {
 
                     if(b_email!=null && !b_email.equals(""))
                         bookMap.put("PersonEmail",b_email);
+                    else
+                        bookMap.put("PersonEmail","NULL");
                     //Datapush to Database
                     bookRef.push().setValue(bookMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
