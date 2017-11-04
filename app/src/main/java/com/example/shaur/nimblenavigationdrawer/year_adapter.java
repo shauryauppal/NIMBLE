@@ -20,8 +20,7 @@ import java.util.ArrayList;
 
 public class year_adapter extends ArrayAdapter<year_list> {
 
-    public year_adapter (Activity context, ArrayList<year_list> Num)
-    {
+    public year_adapter (Activity context, ArrayList<year_list> Num){
         super(context,0,Num);
     }
     @NonNull

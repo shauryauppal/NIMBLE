@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NimbleNavigationDrawer.iml" filepath="$PROJECT_DIR$/NimbleNavigationDrawer.iml" />
+      <module fileurl="file://D:\Android Projects\nimble\NimbleNavigationDrawer.iml" filepath="D:\Android Projects\nimble\NimbleNavigationDrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nimble.iml" filepath="$PROJECT_DIR$/.idea/nimble.iml" />
     </modules>
   </component>
 </project>

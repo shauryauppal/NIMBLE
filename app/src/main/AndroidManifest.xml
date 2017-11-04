@@ -40,8 +40,12 @@
         <activity
             android:name=".year_main_fragment"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".BooksPost"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".BooksPost"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".FireDriveActivity" />
+        <activity android:name=".FileUploadActivity" />
+        <activity android:name=".StorageDisplayActivity"></activity>
     </application>
 
 </manifest>

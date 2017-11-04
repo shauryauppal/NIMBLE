@@ -102,6 +102,15 @@ public class MainActivity extends AppCompatActivity
         /*
         TODO: ADD fileserver google drive api
          */
+        fileserver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,FireDriveActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT,"0");
+                startActivity(intent);
+            }
+        });
+
         year1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

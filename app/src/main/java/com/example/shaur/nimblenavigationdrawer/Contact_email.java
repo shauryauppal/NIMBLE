@@ -107,7 +107,6 @@ public class Contact_email extends AppCompatActivity {
                         Toast.makeText(Contact_email.this, "Message Required", Toast.LENGTH_SHORT).show();
                 }
 
-
             }
         });
     }
