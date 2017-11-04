@@ -19,7 +19,6 @@ public class BooksPost extends AppCompatActivity {
 
         // Create an adapter that knows which fragment should be shown on each page
         SimpleBookFragmentAdapter adapter = new SimpleBookFragmentAdapter(this,getSupportFragmentManager());
-
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
 

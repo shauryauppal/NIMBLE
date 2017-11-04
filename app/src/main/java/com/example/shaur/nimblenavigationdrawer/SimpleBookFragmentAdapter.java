@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class SimpleBookFragmentAdapter extends FragmentPagerAdapter{
 
+
     private Context mContext;
     public SimpleBookFragmentAdapter(Context context,FragmentManager fm)
     {
@@ -40,14 +41,14 @@ public class SimpleBookFragmentAdapter extends FragmentPagerAdapter{
             return new all_books();
         } else if (position == 1){
             return new simple_posting_books();
-        } else if (position == 2) {
+        } else {
             return new smart_posting_books();
         }
-        else return null;
     }
 
     @Override
     public int getCount() {
         return 3;
     }
+
 }

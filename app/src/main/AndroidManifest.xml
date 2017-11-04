@@ -41,7 +41,8 @@
             android:name=".year_main_fragment"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".BooksPost"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
     </application>
 
 </manifest>

@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.shaur.nimblenavigationdrawer.simple_posting_books">
-
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
         <TextView
             android:id="@+id/simple_ad"
@@ -19,19 +22,19 @@
             android:layout_marginTop="8dp"
             android:background="@color/colorPrimaryLight"
             android:gravity="center"
-            android:text="Simple Ad Posting"
+            android:text="@string/simple_book_ad"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintBottom_toTopOf="@+id/book_name_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.14" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/book_name_input"
             android:layout_width="342dp"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -44,10 +47,10 @@
             app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.146" />
+            app:layout_constraintVertical_bias="0.181" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/book_price_input"
             android:layout_width="170dp"
             android:layout_height="46dp"
             android:layout_marginBottom="80dp"
@@ -58,15 +61,68 @@
             android:hint="Selling Price"
             android:inputType="number"
             android:maxLength="4"
-            app:layout_constraintBottom_toTopOf="@+id/book_simple_description"
+            app:layout_constraintBottom_toTopOf="@+id/book_simple_description_input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82" />
+
+
+        <CheckBox
+            android:id="@+id/checkBox_input"
+            android:layout_width="113dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="84dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Negotiable"
+            app:layout_constraintBottom_toTopOf="@+id/book_simple_description_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.772"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_name_input"
+            app:layout_constraintVertical_bias="0.136" />
+
+        <EditText
+            android:id="@+id/book_person_contact_input"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            app:layout_constraintBottom_toTopOf="@+id/book_simple_description_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_price_input"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/book_simple_description"
+            android:id="@+id/book_person_email_input"
+            android:layout_width="286dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Enter Email Id (optional)"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/book_simple_description_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_person_contact_input"
+            app:layout_constraintVertical_bias="0.375" />
+
+        <EditText
+            android:id="@+id/book_simple_description_input"
             android:layout_width="336dp"
             android:layout_height="85dp"
             android:layout_marginBottom="8dp"
@@ -77,71 +133,19 @@
             android:gravity="top"
             android:hint="@string/simple_book_description"
             android:inputType="textMultiLine"
-            android:maxLines="5"
+            android:maxLines="4"
             android:minLines="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
-            app:layout_constraintVertical_bias="0.59" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="113dp"
-            android:layout_height="37dp"
-            android:layout_marginBottom="84dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Negotiable"
-            app:layout_constraintBottom_toTopOf="@+id/book_simple_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.784"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="251dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Contact Number"
-            android:inputType="phone"
-            app:layout_constraintBottom_toTopOf="@+id/book_simple_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.068"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText3"
-            app:layout_constraintVertical_bias="0.048" />
-
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="286dp"
-            android:layout_height="43dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Enter Email Id (optional)"
-            android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/book_simple_description"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.375" />
+            app:layout_constraintTop_toBottomOf="@+id/book_name_input"
+            app:layout_constraintVertical_bias="0.727" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/book_simple_form_button"
+            android:layout_width="88dp"
+            android:layout_height="48dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -152,9 +156,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/book_simple_description"
+            app:layout_constraintTop_toBottomOf="@+id/book_simple_description_input"
             app:layout_constraintVertical_bias="0.606" />
 
 
     </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>
