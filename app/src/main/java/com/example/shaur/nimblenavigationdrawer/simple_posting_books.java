@@ -84,17 +84,17 @@ public class simple_posting_books extends Fragment {
                     {
                         bookMap.put("Negotiable","true");
                     }
-                    else
+                    else if(!checkBox_input_negotiate.isChecked())
                     {
                         bookMap.put("Negotiable","false");
                     }
-                    bookMap.put("BookDescription",b_descrp);
-                    bookMap.put("PersonContactNumber",b_cnumber);
+                    bookMap.put("Description",b_descrp);
+                    bookMap.put("ContactNumber",b_cnumber);
 
                     if(b_email!=null && !b_email.equals(""))
-                        bookMap.put("PersonEmail",b_email);
+                        bookMap.put("Email",b_email);
                     else
-                        bookMap.put("PersonEmail","NULL");
+                        bookMap.put("Email","nimblehelp@gmail.com");
                     //Datapush to Database
                     bookRef.push().setValue(bookMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

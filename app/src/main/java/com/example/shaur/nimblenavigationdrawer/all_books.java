@@ -1,13 +1,14 @@
 package com.example.shaur.nimblenavigationdrawer;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +31,6 @@ public class all_books extends Fragment {
 
 
     RecyclerView recyclerView;
-    BookAdapter adapter;
 
     List<Books_getter_function> bookList;
 
@@ -43,51 +43,52 @@ public class all_books extends Fragment {
         View view = inflater.inflate(R.layout.fragment_all_books, container, false);
 
 
-
-
-
         bookList = new ArrayList<>();
         final BookAdapter adapter = new BookAdapter(getActivity(),bookList);
 
         recyclerView = view.findViewById(R.id.recyclerView_books);
         recyclerView.setHasFixedSize(true);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         recyclerView.setAdapter(adapter);
 
+
+        bookList.add(new Books_getter_function("Ghatak 2008","200","shauryauppal00111@gmil.com","Excellent book must buy","1233214390",R.drawable.book_blue_icon));
+
         bookRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value =dataSnapshot.getValue().toString();
+                String value = String.valueOf(dataSnapshot.getValue());
+                //LOG IS WORKING FINE
+                Log.i("Book",value);
 
                 try {
                     JSONObject object = new JSONObject(value);
-
                     b_name = object.getString("BookName");
                     b_price = object.getString("BookPrice");
+                    contact = object.getString("ContactNumber");
+                    b_desc  = object.getString("Description");
                     negotiate = object.getString("Negotiable");
-                    b_desc = object.getString("BookDescription");
-                    contact = object.getString("PersonContactNumber");
-                    email = object.getString("PersonEmail");
+                    email = object.getString("Email");
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                if(negotiate.equals("true"))
+
+                if(negotiate=="true" && b_price!=null)
                 {
-                    b_price+=" (negotiable)";
+                    b_price+="(negotiable)";
                 }
-                if(email.equals("NULL"))
-                {
-                    email="nimble@gmail.com";
-                }
-                bookList.add(new Books_getter_function(b_name, b_price,email,b_desc,contact,R.drawable.book_blue_icon));
+
+                if(b_name!=null && b_price!=null && email!=null && b_desc!=null)
+                bookList.add(new Books_getter_function(b_name,b_price,email,b_desc,contact,R.drawable.book_blue_icon));
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                adapter.notifyDataSetChanged();
+              adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -97,17 +98,14 @@ public class all_books extends Fragment {
 
             @Override
             public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
+                adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Toast.makeText(getActivity(), "Read failed:"+databaseError.getCode(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
-
 
 
         return view;
