@@ -14,7 +14,7 @@
             android:layout_height="121dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/nimblelogo"
+            app:srcCompat="@drawable/nimble_leaf"
             android:layout_marginRight="8dp"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginLeft="8dp"

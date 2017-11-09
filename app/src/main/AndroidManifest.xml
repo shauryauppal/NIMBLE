@@ -40,11 +40,27 @@
         <activity
             android:name=".year_main_fragment"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".BooksPost"
+        <activity
+            android:name=".BooksPost"
             android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
-        <activity android:name=".ChatSupport"
-            android:parentActivityName=".MainActivity"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ChatSupport"
+            android:parentActivityName=".MainActivity" />
+
+        <service android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Recentupdates"/>
     </application>
 
 </manifest>
