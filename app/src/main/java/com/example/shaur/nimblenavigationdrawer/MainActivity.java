@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
     FirebaseDatabase db = FirebaseDatabase.getInstance();
     DatabaseReference rootRef = db.getReference();
     DatabaseReference UserRef = rootRef.child("User");
+    DatabaseReference notref = rootRef.child("notification");
 
     boolean doubleBackToExitPressedOnce = false;
     Button year1,year2,year3,year4,fileserver;
@@ -70,6 +71,8 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        MyFireBaseMessagingService message = new MyFireBaseMessagingService();
+        notref.setValue(message.getMessage());
 
         final HashMap<String,String> userMap = new HashMap<String, String>();
         userMap.put("TokenID",SharedPreManager.getInstance(MainActivity.this).getToken());
@@ -257,6 +260,9 @@ public class MainActivity extends AppCompatActivity
         }
         else if(id==R.id.nav_notifications){
             startActivity(new Intent(MainActivity.this,Recentupdates.class));
+        }
+        else if(id==R.id.nav_jubilate){
+            startActivity(new Intent(MainActivity.this,Jubilate.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

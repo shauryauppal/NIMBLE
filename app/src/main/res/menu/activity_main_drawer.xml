@@ -23,6 +23,10 @@
             android:icon="@drawable/ic_place_black_24dp"
             android:title="Maps" />
         <item
+            android:id="@+id/nav_jubilate"
+            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:title="Let's Jubilate"/>
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout_icon"
             android:title="Logout" />
