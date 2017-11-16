@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class Jubilate extends AppCompatActivity {
 
-    ImageView snakesopen;
+    ImageView snakesopen,rockopen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +22,14 @@ public class Jubilate extends AppCompatActivity {
                 startActivity(new Intent(Jubilate.this,snakesladder.class));
             }
         });
+
+        rockopen = (ImageView) findViewById(R.id.rockpaperscissorgame);
+        rockopen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jubilate.this,stonepaperscissor.class));
+            }
+        });
+
     }
 }

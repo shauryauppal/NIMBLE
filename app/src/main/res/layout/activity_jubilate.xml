@@ -20,4 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/snakesladdericon" />
+
+    <ImageView
+        android:id="@+id/rockpaperscissorgame"
+        android:layout_width="66dp"
+        android:layout_height="68dp"
+        app:srcCompat="@drawable/rockpaperscissor"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="43dp" />
 </android.support.constraint.ConstraintLayout>

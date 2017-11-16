@@ -61,7 +61,8 @@
 
         <activity android:name=".Recentupdates" />
         <activity android:name=".Jubilate" />
-        <activity android:name=".snakesladder"></activity>
+        <activity android:name=".snakesladder" />
+        <activity android:name=".stonepaperscissor"></activity>
     </application>
 
 </manifest>
