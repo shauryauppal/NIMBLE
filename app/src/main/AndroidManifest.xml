@@ -60,10 +60,15 @@
         </service>
 
         <activity android:name=".Recentupdates" />
-        <activity android:name=".Jubilate" />
-        <activity android:name=".snakesladder" />
-        <activity android:name=".stonepaperscissor"/>
+        <activity android:name=".Jubilate"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".snakesladder"
+            android:parentActivityName=".Jubilate"/>
+        <activity android:name=".stonepaperscissor"
+            android:parentActivityName=".Jubilate"/>
     	<activity android:name=".EarthquakeActivity" />
+        <activity android:name=".Tictactoe"
+            android:parentActivityName=".Jubilate"/>
     </application>
 
 </manifest>

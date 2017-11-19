@@ -1,6 +1,7 @@
 package com.example.shaur.nimblenavigationdrawer;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.ImageView;
 
 public class Jubilate extends AppCompatActivity {
 
-    ImageView snakesopen,rockopen,earthopen;
+    ImageView snakesopen,rockopen,earthopen,tictacopen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,14 @@ public class Jubilate extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Jubilate.this,EarthquakeActivity.class ));
+            }
+        });
+
+        tictacopen = (ImageView) findViewById(R.id.tictacicon);
+        tictacopen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jubilate.this,Tictactoe.class));
             }
         });
 

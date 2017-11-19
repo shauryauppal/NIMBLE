@@ -43,7 +43,7 @@ public class stonepaperscissor extends AppCompatActivity {
             public void onClick(View view) {
                 //rockpaperimage.animate().alpha(0).setDuration(1200);
                 //rockpaperimage.animate().alpha(1).setDuration(2000);
-                rockpaperimage.setRotation(180);
+                rockpaperimage.animate().rotation(180).setDuration(1000);
                 gameRef.setValue("rock");
 
             }
@@ -53,7 +53,7 @@ public class stonepaperscissor extends AppCompatActivity {
             public void onClick(View view) {
                 //rockpaperimage.animate().alpha(0).setDuration(1200);
                 //rockpaperimage.animate().alpha(1).setDuration(1000);
-                rockpaperimage.setRotation(300);
+                rockpaperimage.animate().rotation(300).setDuration(1000);
                 gameRef.setValue("paper");
 
             }
@@ -64,7 +64,7 @@ public class stonepaperscissor extends AppCompatActivity {
 
                 //rockpaperimage.animate().alpha(0).setDuration(1200);
                 //rockpaperimage.animate().alpha(1).setDuration(1000);
-                rockpaperimage.setRotation(60);
+                rockpaperimage.animate().rotation(60).setDuration(1000);
                 gameRef.setValue("scissor");
 
             }
