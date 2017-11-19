@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:text="1.42"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:background="@drawable/magnitude_circle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/locationoffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textAllCaps="true"
+            android:maxLines="1"
+            tools:text="New"
+            android:textSize="16sp"
+            android:textColor="@color/textColorEarthquakeDetails"/>
+        <TextView
+            android:id="@+id/locationprimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Delhi"
+            android:textSize="16sp"
+            android:textColor="@color/textColorEarthquakeLocation"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+    <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:padding="10dp"
+            tools:text="Mon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            tools:text="3:00pm"
+            android:maxLines="1"
+            android:id="@+id/time"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

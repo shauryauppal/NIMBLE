@@ -24,21 +24,25 @@ public class stonepaperscissor extends AppCompatActivity {
     ImageView rockpaperimage;
     Button rock,paper,scissor;
     TextView rockpapertext;
+    String text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stonepaperscissor);
 
-        rockpaperimage = (ImageView) findViewById(R.id.rockpaperimage);
+
         rock = (Button) findViewById(R.id.rock);
         paper = (Button) findViewById(R.id.paper);
         scissor = (Button) findViewById(R.id.scissor);
         rockpapertext = (TextView) findViewById(R.id.rockpapertext);
+        rockpaperimage = findViewById(R.id.rockpaperimage);
 
 
         rock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //rockpaperimage.animate().alpha(0).setDuration(1200);
+                //rockpaperimage.animate().alpha(1).setDuration(2000);
                 rockpaperimage.setRotation(180);
                 gameRef.setValue("rock");
 
@@ -47,7 +51,9 @@ public class stonepaperscissor extends AppCompatActivity {
         paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rockpaperimage.setRotation(120);
+                //rockpaperimage.animate().alpha(0).setDuration(1200);
+                //rockpaperimage.animate().alpha(1).setDuration(1000);
+                rockpaperimage.setRotation(300);
                 gameRef.setValue("paper");
 
             }
@@ -55,7 +61,10 @@ public class stonepaperscissor extends AppCompatActivity {
         scissor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rockpaperimage.setRotation(180);
+
+                //rockpaperimage.animate().alpha(0).setDuration(1200);
+                //rockpaperimage.animate().alpha(1).setDuration(1000);
+                rockpaperimage.setRotation(60);
                 gameRef.setValue("scissor");
 
             }
@@ -69,8 +78,14 @@ public class stonepaperscissor extends AppCompatActivity {
         gameRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String text = dataSnapshot.getValue().toString();
+                text = dataSnapshot.getValue().toString();
                 rockpapertext.setText(text);
+
+                if(text=="scissor")
+                    rockpaperimage.setRotation(60);
+                else if(text=="rock")
+                    rockpaperimage.setRotation(180);
+                else rockpaperimage.setRotation(300);
             }
 
             @Override

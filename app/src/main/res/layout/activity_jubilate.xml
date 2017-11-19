@@ -9,23 +9,49 @@
 
     <ImageView
         android:id="@+id/snakesladdericon"
-        android:layout_width="69dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="400dp"
-        android:layout_marginEnd="270dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="47dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098"
         app:srcCompat="@drawable/snakesladdericon" />
 
     <ImageView
         android:id="@+id/rockpaperscissorgame"
-        android:layout_width="66dp"
-        android:layout_height="68dp"
-        app:srcCompat="@drawable/rockpaperscissor"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="43dp" />
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toEndOf="@+id/snakesladdericon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098"
+        app:srcCompat="@drawable/rockpaperscissor" />
+
+    <ImageView
+        android:id="@+id/earthquakeicon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toEndOf="@+id/rockpaperscissorgame"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098"
+        app:srcCompat="@mipmap/earthquakeicon" />
 </android.support.constraint.ConstraintLayout>
