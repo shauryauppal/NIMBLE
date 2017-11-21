@@ -35,7 +35,7 @@ public class stonepaperscissor extends AppCompatActivity {
         paper = (Button) findViewById(R.id.paper);
         scissor = (Button) findViewById(R.id.scissor);
         rockpapertext = (TextView) findViewById(R.id.rockpapertext);
-        rockpaperimage = findViewById(R.id.rockpaperimage);
+        rockpaperimage = (ImageView)findViewById(R.id.rockpaperimage);
 
 
         rock.setOnClickListener(new View.OnClickListener() {

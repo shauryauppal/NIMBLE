@@ -62,7 +62,7 @@ public class Tictactoe extends AppCompatActivity {
                     {
                         ct_d2++;
                     }
-                    else if(win[i][j]==0)
+                    if(win[i][j]==0)
                         ct_d2--;
                 }
 
@@ -78,23 +78,24 @@ public class Tictactoe extends AppCompatActivity {
                 break;
             }
         }
-        count=0;
+
+        int ct_1=0,ct_2=0;
         for(int i=0;i<3;i++)
         {
-            count=0;
+            ct_1=0;ct_2=0;
             for(int j=0;j<3;j++)
             {
                 if(win[j][i]==1)
-                    count++;
-                else if(win[i][j]==0)
-                    count--;
+                    ct_1++;
+                if(win[j][i]==0)
+                    ct_2--;
             }
-            if(count==3)
+            if(ct_1==3)
             {
                 winner1();
                 break;
             }
-            if(count==-3)
+            else if(ct_2==-3)
             {
                 winner2();
                 break;
