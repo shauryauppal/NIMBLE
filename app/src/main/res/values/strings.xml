@@ -22,4 +22,5 @@
     <string name="b4_meaning">Nimble is a app the aims to help and support students. Nimble meaning fast and easy. We are here to support you.</string>
     <string name="no_earthquakes">No earthquakes found</string>
     <string name="no_internet_conection">NO INTERNET CONNECTION</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
