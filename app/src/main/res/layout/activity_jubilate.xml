@@ -70,4 +70,36 @@
         app:layout_constraintTop_toBottomOf="@+id/snakesladdericon"
         app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/tictactoeicon" />
+
+    <ImageView
+        android:id="@+id/timericon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toEndOf="@+id/tictacicon"
+        app:layout_constraintTop_toBottomOf="@+id/rockpaperscissorgame"
+        app:layout_constraintVertical_bias="0.056"
+        app:srcCompat="@drawable/timer" />
+
+    <ImageView
+        android:id="@+id/counter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/timericon"
+        app:layout_constraintTop_toBottomOf="@+id/earthquakeicon"
+        app:layout_constraintVertical_bias="0.056"
+        app:srcCompat="@drawable/counter" />
 </android.support.constraint.ConstraintLayout>

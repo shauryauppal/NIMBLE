@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class Jubilate extends AppCompatActivity {
 
-    ImageView snakesopen,rockopen,earthopen,tictacopen;
+    ImageView snakesopen,rockopen,earthopen,tictacopen,timeropen,counteropen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,21 @@ public class Jubilate extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Jubilate.this,Tictactoe.class));
+            }
+        });
+        timeropen = (ImageView) findViewById(R.id.timericon);
+        timeropen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jubilate.this,TimerApp.class));
+            }
+        });
+
+        counteropen = (ImageView) findViewById(R.id.counter);
+        counteropen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jubilate.this,courtcounter.class));
             }
         });
 
