@@ -34,4 +34,5 @@
         android:text="JIIT MAPS"
         android:textSize="20sp"
         android:textStyle="bold" />
+
 </RelativeLayout>

@@ -27,6 +27,10 @@
             android:icon="@drawable/ic_whatshot_black_24dp"
             android:title="Let's Jubilate"/>
         <item
+            android:id="@+id/nav_campusview"
+            android:icon="@drawable/ic_collections_black_24dp"
+            android:title="Campus View"/>
+        <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout_icon"
             android:title="Logout" />

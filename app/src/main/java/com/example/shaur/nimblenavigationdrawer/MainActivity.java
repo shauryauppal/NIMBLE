@@ -264,6 +264,9 @@ public class MainActivity extends AppCompatActivity
         else if(id==R.id.nav_jubilate){
             startActivity(new Intent(MainActivity.this,Jubilate.class));
         }
+        else if(id == R.id.nav_campusview){
+            startActivity(new Intent(MainActivity.this,CampusView.class));
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
