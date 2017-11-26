@@ -102,4 +102,19 @@
         app:layout_constraintTop_toBottomOf="@+id/earthquakeicon"
         app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/counter" />
+
+    <ImageView
+        android:id="@+id/weathericon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timericon"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/weathericon" />
 </android.support.constraint.ConstraintLayout>

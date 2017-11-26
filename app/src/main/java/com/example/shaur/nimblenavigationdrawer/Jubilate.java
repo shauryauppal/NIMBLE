@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.android.volley.toolbox.ImageRequest;
+
 public class Jubilate extends AppCompatActivity {
 
-    ImageView snakesopen,rockopen,earthopen,tictacopen,timeropen,counteropen;
+    ImageView snakesopen,rockopen,earthopen,tictacopen,timeropen,counteropen,weatheropen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,14 @@ public class Jubilate extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Jubilate.this,courtcounter.class));
+            }
+        });
+
+        weatheropen = (ImageView) findViewById(R.id.weathericon);
+        weatheropen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Jubilate.this,Weather.class));
             }
         });
 
