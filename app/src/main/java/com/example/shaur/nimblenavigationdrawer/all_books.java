@@ -54,7 +54,7 @@ public class all_books extends Fragment {
         recyclerView.setAdapter(adapter);
 
 
-        bookList.add(new Books_getter_function("Ghatak 2008","200","shauryauppal00111@gmil.com","Excellent book must buy","1233214390",R.drawable.book_blue_icon));
+        bookList.add(new Books_getter_function("Ghatak 2008","200","shauryauppal00111@gmail.com","Excellent book must buy","1233214390",R.drawable.book_blue_icon));
 
         bookRef.addChildEventListener(new ChildEventListener() {
             @Override
@@ -77,14 +77,16 @@ public class all_books extends Fragment {
                     e.printStackTrace();
                 }
 
-                if(negotiate=="true" && b_price!=null)
-                {
-                    b_price+="(negotiable)";
-                }
+//                if(negotiate=="true" && b_price!=null)
+//                {
+//                    b_price+="(negotiable)";
+//                }
 
                 if(b_name!=null && b_price!=null && email!=null && b_desc!=null)
                 bookList.add(new Books_getter_function(b_name,b_price,email,b_desc,contact,R.drawable.book_blue_icon));
                 adapter.notifyDataSetChanged();
+
+               // b_name=b_price=contact=b_desc=negotiate=email=null;
             }
 
             @Override
