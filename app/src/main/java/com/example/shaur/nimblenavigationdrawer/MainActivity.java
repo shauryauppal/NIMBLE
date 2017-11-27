@@ -238,7 +238,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this,BooksPost.class);
             startActivity(intent);
         }
-        else if (id == R.id.nav_gallery) {
+        else if (id == R.id.nav_recorder) {
+            startActivity(new Intent(MainActivity.this,RecordActivity.class));
 
         } else if (id == R.id.nav_maps) {
            startActivity(new Intent(MainActivity.this,MapsActivity.class));
