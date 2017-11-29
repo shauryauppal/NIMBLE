@@ -27,3 +27,54 @@ section when in stress.
 9. Google Maps API: Used for JIIT satellite view with markers.
 10. Google Volley used: In CampusView Images section and Weather app. Volley is an HTTP library that makes networking for Android Apps easier and faster.
 11. NFC tags: Coded in such a way that our apps opens by a simple touch.
+
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022658.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022702.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022708.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022731.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022741.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022837.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022847.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022907.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022914.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022923.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-022937.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-023148.png" height="500dp" width=300dp/><br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-023156.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-023600.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171127-201243.png" height="500dp" width=300dp/><br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171128-000425.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171128-125318.png" height="500dp" width=300dp/>
+<br>
+<br>
+<img src="https://github.com/shauryauppal/NIMBLE/raw/master/APP%20Screenshots/Screenshot_20171128-125316.png" height="500dp" width=300dp/>
