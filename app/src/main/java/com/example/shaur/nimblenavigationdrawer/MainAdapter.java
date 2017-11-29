@@ -75,7 +75,7 @@ class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>
         }
         holder.mTimeText.setText(com.example.shaur.nimblenavigationdrawer.Utils.getDateString(fileName));
         holder.mLengthText.setText(mContext.getString(R.string.item_file_size,
-                Utils.getFileSizeString(f.length())));
+                com.example.shaur.nimblenavigationdrawer.Utils.getFileSizeString(f.length())));
     }
 
     @Override

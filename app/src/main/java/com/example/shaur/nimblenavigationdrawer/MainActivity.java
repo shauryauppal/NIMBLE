@@ -169,7 +169,12 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
+        fileserver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Download.class));
+            }
+        });
 
     }
 
