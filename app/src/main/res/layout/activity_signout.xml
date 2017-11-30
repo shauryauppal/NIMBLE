@@ -8,7 +8,6 @@
     android:background="#fdcbcb">
 
     <TextView
-        android:id="@+id/signout_thankyou"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -22,7 +21,6 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

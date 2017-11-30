@@ -14,7 +14,6 @@
     android:weightSum="1">
 
     <ImageView
-        android:id="@+id/imageView2"
         android:layout_width="75dp"
         android:layout_height="52dp"
         android:layout_weight="0.23"
@@ -30,7 +29,6 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/email_nav_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nimblehelp@gmail.com" />

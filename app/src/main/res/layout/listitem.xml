@@ -16,7 +16,6 @@
         tools:src="@drawable/nimble_leaf"/>
 
     <RelativeLayout
-        android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="49dp">
 

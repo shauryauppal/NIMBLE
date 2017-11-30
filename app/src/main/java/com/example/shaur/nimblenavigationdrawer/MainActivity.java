@@ -237,16 +237,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        }else if(id==R.id.nav_books){
+        if(id==R.id.nav_books){
             Intent intent = new Intent(MainActivity.this,BooksPost.class);
             startActivity(intent);
         }
-        else if (id == R.id.nav_recorder) {
-            startActivity(new Intent(MainActivity.this,RecordActivity.class));
-
-        } else if (id == R.id.nav_maps) {
+        else if (id == R.id.nav_maps) {
            startActivity(new Intent(MainActivity.this,MapsActivity.class));
         } else if (id == R.id.nav_contact) {
             Intent intent = new Intent(MainActivity.this ,Contact.class);

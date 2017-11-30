@@ -25,7 +25,6 @@
     tools:context="com.example.shaur.nimblenavigationdrawer.MapsActivity" />
 
     <TextView
-        android:id="@+id/jiit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

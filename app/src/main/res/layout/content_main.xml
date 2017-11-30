@@ -30,7 +30,6 @@
 
 
         <TextView
-            android:id="@+id/welcome"
             android:layout_width="168dp"
             android:layout_height="22dp"
             android:layout_alignStart="@+id/imageView"

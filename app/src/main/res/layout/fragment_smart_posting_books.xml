@@ -13,7 +13,6 @@
             android:weightSum="1">
 
             <RelativeLayout
-                android:id="@+id/ImageContainer"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_margin="4dp"
@@ -28,7 +27,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/OCRButtonContainer"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginLeft="4dp"
@@ -84,7 +82,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/OCRTextContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"

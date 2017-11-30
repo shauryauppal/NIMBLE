@@ -37,7 +37,6 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <Button
-                android:id="@+id/threepoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#3399ff"
@@ -46,7 +45,6 @@
                 android:text="3 Points" />
 
             <Button
-                android:id="@+id/twopoints"
                 android:layout_width="match_parent"
                 android:background="#3399ff"
                 android:layout_height="wrap_content"
@@ -55,7 +53,6 @@
                 android:text="2 Points" />
 
             <Button
-                android:id="@+id/onepoints"
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
                 android:layout_height="wrap_content"
@@ -96,7 +93,6 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <Button
-                android:id="@+id/threepointsB"
                 android:background="#3399ff"
                 android:layout_margin="5dp"
 
@@ -106,7 +102,6 @@
                 android:text="3 Points" />
 
             <Button
-                android:id="@+id/twopointsB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#3399ff"
@@ -115,7 +110,6 @@
                 android:text="2 Points" />
 
             <Button
-                android:id="@+id/onepoints"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="increment_oneB"
